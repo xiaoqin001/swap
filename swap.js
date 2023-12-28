@@ -33,10 +33,10 @@ const run = async () => {
 
         const path = [WETH.address, LINK.address];
         const to = wallet.address
-        const deadline = Math.floor(Date.now() / 1000) + 60 * 20 // 20 minutes from the current Unix time
+        const deadline = Math.floor(Date.now() / 1000) + 60 * 20 
 
-        const value = trade.inputAmount.raw; // // needs to be converted to e.g. hex
-        const valueHex = await ethers.BigNumber.from(value.toString()).toHexString(); //convert to hex string
+        const value = trade.inputAmount.raw; 
+        const valueHex = await ethers.BigNumber.from(value.toString()).toHexString(); 
 
 
         const rawTxn = await uniswapContract.populateTransaction.swapExactETHForTokens(amountOutMinHex, path, to, deadline,
