@@ -48,12 +48,11 @@ const run = async () => {
 
         let sendTxn = (await wallet).sendTransaction(rawTxn);
 
-        console.log('here')
+   
         console.log((await sendTxn).hash);
 
         let reciept = (await sendTxn).wait();
-        // console.log('receipt')
-        // console.log(reciept);
+
 
 
     } catch(e){
