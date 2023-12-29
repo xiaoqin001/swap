@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 const { ChainId, Fetcher, Token, Route, Percent, Trade, TokenAmount, TradeType } = require ('@uniswap/sdk');
 require('dotenv').config()
 
-const goerliInfuraUrl = 'https://goerli.infura.io/v3/41c57943e2fb405ea4739cf33cff403d';
+const goerliInfuraUrl = 'https://goerli.infura.io/v3/[INFURA_API_KEY]';
 const goerliProvider = new ethers.providers.JsonRpcProvider(goerliInfuraUrl);
 
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, goerliProvider);
